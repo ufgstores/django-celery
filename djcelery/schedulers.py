@@ -15,7 +15,7 @@ try:
     # Fall back to kombu.utils.finalize if Kombu version < 3.x
     from multiprocessing.util import Finalize
 except ImportError:
-    from kombu.utils.finalize import Finalize
+    from kombu.utils.finalize import Finalize  # noqa
 
 from django.db import transaction
 from django.core.exceptions import ObjectDoesNotExist
